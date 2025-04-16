@@ -96,7 +96,7 @@ def insert_tweet(connection,tweet):
     WHERE id_tweets = :id_tweets
     ''')
     res = connection.execute(sql,{
-        'id_tweets':int(tweet['id']),
+        'id_tweets': str(tweet['id']),
         })
     if res.first() is not None:
         return
