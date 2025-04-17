@@ -15,4 +15,4 @@ time echo "$files" | parallel ./load_tweets.py --db "postgresql://postgres:pass@
 echo '================================================================================'
 echo 'load pg_normalized_batch'
 echo '================================================================================'
-# FIXME: implement this with GNU parallel
+ time echo "$files" | parallel ./load_tweets_parallel.py --db "postgresql://postgres:pass@localhost:10263" --inputs {}
