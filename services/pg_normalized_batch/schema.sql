@@ -92,7 +92,7 @@ CREATE TABLE tweet_media (
     id_tweets BIGINT,
     url TEXT,
     type TEXT,
-    PRIMARY KEY (id_tweets),
+    PRIMARY KEY (id_tweets, url),
     FOREIGN KEY (id_tweets) REFERENCES tweets(id_tweets) DEFERRABLE INITIALLY DEFERRED
 );
 
